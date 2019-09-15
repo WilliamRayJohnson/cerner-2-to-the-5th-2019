@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--cerner_2^5_2019-->
+        <meta charset="UTF-8">
+        <script>
+            const startDate = new Date('September 13, 2019 00:00:00 GMT-0500');
+            function Is2to5th2019Active() {
+                var currentDate = new Date();
+                return currentDate <= new Date().setDate(startDate.getDate() + 32)
+                    && currentDate >= startDate;
+            }
+        </script>
+        <style>
+            #answer {
+                text-align: center;
+                font-size: 500%;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="answer"></p>
+        <script>
+            var isActive = Is2to5th2019Active();
+            document.getElementById("answer").innerHTML = isActive ? "Yes" : "No";
+            document.getElementById("answer").style.backgroundColor = isActive ? "green" : "red";
+        </script>
+    </body>
+</html>
